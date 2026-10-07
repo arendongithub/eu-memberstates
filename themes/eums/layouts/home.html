@@ -118,7 +118,7 @@
     polygonSeries.mapPolygons.template.events.on("click", function (event) {
       const country = event.target.dataItem.dataContext;
       if (country.name.toLowerCase() === "france") {
-        open("/countries/" + country.name.toLowerCase(), "_blank");
+        open("countries/" + country.name.toLowerCase(), "_blank");
       } else {
         // alert("You clicked " + country.name);
         alert(
