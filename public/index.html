@@ -1,0 +1,209 @@
+<!doctype html>
+<html
+  lang="en-us"
+  dir="ltr"
+>
+  <head>
+	<meta name="generator" content="Hugo 0.157.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+  EU Memberstates
+</title>
+
+<link rel="stylesheet" href="/css/style.css" />
+ 
+      <script src="/js/main.js"></script>
+
+
+  </head>
+  <body class="font-display bg-gray-100">
+    <header>
+
+<div class="mx-auto flex max-w-5xl justify-between px-6 py-12">
+  <div>
+    <p class="text-2xl font-bold text-blue-950">EU Memberstates</p>
+  </div>
+  <div>
+    
+    <img
+      src="/images/umlogo.png"
+      alt="Maastricht University logo"
+      class="hidden h-10 lg:block"
+    />
+    
+  </div>
+</div>
+
+<nav class="bg-blue-950">
+  <div class="flex justify-end sm:hidden">
+    <button
+      onclick="toggleMenu()"
+      type="button"
+      class="block px-4 py-3 text-blue-300 hover:text-white focus:text-white focus:outline-none"
+    >
+      <svg
+        id="menu-icon"
+        class="h-6 w-6 fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+        />
+      </svg>
+      <svg
+        id="close-icon"
+        class="hidden h-6 w-6 fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
+  </div>
+  <div
+    id="menu"
+    class="mx-auto hidden max-w-5xl px-4 pt-6 pb-6 sm:flex sm:items-center"
+  >
+    
+    <a
+      href="/"
+      class="mt-1 block rounded px-2 py-1 font-semibold text-white hover:bg-blue-900 sm:mt-0"
+      >Home</a
+    >
+    
+    <a
+      href="/about/"
+      class="mt-1 block rounded px-2 py-1 font-semibold text-white hover:bg-blue-900 sm:mt-0"
+      >About</a
+    >
+    
+  </div>
+</nav>
+
+</header>
+    <main>
+
+
+
+
+
+
+<div id="chartdiv" class="m-0 h-250 w-full mx-auto mt-6 max-w-5xl">
+  <div class="sm:w-1/2">
+    <h1 class="px-2 text-2xl font-semibold text-blue-950">
+      Project description
+    </h1>
+    <div class="mt-2 p-2 text-gray-700"><p>EU Memberstates is a project &hellip;</p>
+</div>
+    <a
+      href="http://localhost:1313//about"
+      class="mx-2 inline-block rounded bg-green-700 px-4 py-2 text-white shadow-lg hover:bg-green-800"
+      >Read more</a
+    >
+  </div>
+</div>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script>
+  am5.ready(function () {
+    const root = am5.Root.new("chartdiv");
+    root.setThemes([am5themes_Animated.new(root)]);
+
+    const chart = root.container.children.push(
+      am5map.MapChart.new(root, {
+        projection: am5map.geoMercator(),
+        panX: "rotateX",
+        wheelY: "zoom",
+      }),
+    );
+
+    const euCountries = [
+      "AT",
+      "BE",
+      "BG",
+      "HR",
+      "CY",
+      "CZ",
+      "DK",
+      "EE",
+      "FI",
+      "FR",
+      "DE",
+      "GR",
+      "HU",
+      "IE",
+      "IT",
+      "LV",
+      "LT",
+      "LU",
+      "MT",
+      "NL",
+      "PL",
+      "PT",
+      "RO",
+      "SK",
+      "SI",
+      "ES",
+      "SE",
+    ];
+
+    const polygonSeries = chart.series.push(
+      am5map.MapPolygonSeries.new(root, {
+        geoJSON: am5geodata_worldLow,
+        include: euCountries,
+      }),
+    );
+
+    polygonSeries.mapPolygons.template.setAll({
+      tooltipText: "{name}",
+      interactive: true,
+      fill: am5.color(0x2f80ed),
+      stroke: am5.color(0xffffff),
+      strokeWidth: 1,
+    });
+
+    polygonSeries.mapPolygons.template.states.create("hover", {
+      fill: am5.color(0xf2994a),
+    });
+
+    polygonSeries.mapPolygons.template.events.on("click", function (event) {
+      const country = event.target.dataItem.dataContext;
+      if (country.name.toLowerCase() === "france") {
+        open("/countries/" + country.name.toLowerCase(), "_blank");
+      } else {
+        
+        alert(
+          "The " +
+            country.name +
+            " page is still under construction. Please try the France page instead.",
+        );
+      }
+    });
+
+    chart.appear(1000, 100);
+  });
+</script>
+
+</main>
+    <footer><p>Copyright 2026. All rights reserved.</p>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,839 @@
+{{ define "main" }}
+
+<!--SECTION - Country Quote-->
+<div class="mx-auto mt-12 max-w-5xl px-6" onload="pickCuriosity()">
+  <div class="mb-12">
+    <h1 class="text-4xl font-semibold text-blue-400">{{ .Title }}</h1>
+  </div>
+
+  <!--Curiosity Quote-->
+  <div class="text-2xl text-slate-500" id="curiosity"></div>
+  <script>
+    let curiosities = [
+      "Fourteen African countries continue to use the CFA franc, a currency created during French colonial rule and still pegged to the euro with a guarantee from the French Treasury.",
+      "France has experienced two empires, two constitutional monarchies, five republics and numerous uprisingssince 1789. The current Fifth Republic, established in 1958 by Charles de Gaulle, is France's longest-lasting republican regime.",
+      "France has one of Europe's strictest interpretations of secularism (laïcité), shaping debates on religion, immigration and integration across the EU.",
+      "France has the largest Exclusive Economic Zone (EEZ) in the world due to overseas territories from its colonial past.",
+      "Nearly 3 million French citizens live outside in overseas departments and collectivities, meaning part of the EU is in South America, the Caribbean, the Indian Ocean and the Pacific.",
+    ];
+    let i = Math.floor(Math.random() * curiosities.length);
+    const content = document.getElementById("curiosity");
+    content.innerHTML =
+      '<img src="https://cdn2.iconfinder.com/data/icons/web-kit-2/64/web_quote-1024.png" width="50px" class="inline pr-4">' +
+      curiosities[i];
+  </script>
+</div>
+
+<!--SECTION - TABS - Country description | Links to institutions-->
+<section class="mx-auto mt-12 max-w-5xl px-6 py-6">
+  <!--Tabs-->
+  <div class="font-medium text-center text-body">
+    <ul class="flex flex-wrap">
+      <li class="hover:text-blue-400">
+        <!--button
+          onclick="openTab('description', this)"
+          class="tablabel inline-block p-4 text-blue-950 border-b hover:text-blue-400 hover:border-blue-400"
+      -->
+        <div
+          class="tablabel inline-block p-4 text-blue-950 border-b hover:text-blue-400 hover:border-blue-400"
+          id="1"
+        >
+          Description
+        </div>
+      </li>
+      <li class="hover:text-blue-400">
+        <div
+          class="tablabel inline-block border-transparent p-4 text-blue-950 border-b hover:text-blue-400 hover:border-blue-400"
+          id="2"
+        >
+          Institution Links
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!--TAB1 - Description-->
+  <div class="pt-6 text-gray-900 tabdiv" id="tabdiv-1">
+    <div>{{ .Params.short }}</div>
+    <div
+      id="contentdiv-10"
+      class="contentdiv pb-6 max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+    >
+      {{ .Content }}
+    </div>
+    <button
+      id="10"
+      class="btn-read-more inline-block rounded bg-green-700 px-4 py-2 text-white shadow-lg hover:bg-green-800"
+    >
+      Read more
+    </button>
+  </div>
+
+  <!--TAB2 - Links-->
+  <div class="grid grid-cols-2 tabdiv gap-6 hidden" id="tabdiv-2">
+    <div>
+      <button
+        id="11"
+        class="w-full flex justify-between items-center py-6 text-slate-800 border-b border-slate-300 hover:text-blue-400"
+      >
+        Institutions
+      </button>
+      <div
+        class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+      >
+        <ul class="list-disc">
+          <li class="hover:text-blue-400">
+            <a
+              href="https://ue.diplomatie.gouv.fr/representation-permanente-de-la-france-aupres-de-lunion-europeenne"
+              target="_blank"
+              >Federal Council</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a href="https://www.diplomatie.gouv.fr/en" target="_blank"
+              >Ministry</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a
+              href="https://www.assemblee-nationale.fr/dyn/europe-et-international"
+              target="_blank"
+              >National parliament – EU committee(s) </a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a
+              href="https://onu.delegfrance.org/-France-at-the-United-Nations-"
+              target="_blank"
+              >PermRep</a
+            >
+          </li>
+        </ul>
+      </div>
+      <button
+        id="12"
+        class="w-full flex justify-between items-center py-6 text-slate-800 border-b border-slate-300 hover:text-blue-400"
+      >
+        Academics
+      </button>
+      <div
+        class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+      >
+        <ul class="list-disc">
+          <li class="hover:text-blue-400">
+            <a
+              href="https://www.sciencespo.fr/cevipof/fr/annuaire/costa-olivier/"
+              target="_blank"
+              >Dr. Olivier Costa – Sciences Po / CNRS</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a
+              href="https://www.sciencespo-aix.fr/en/teachers/dorota-dakowska/"
+              target="_blank"
+              >Prof. Dr. Dorota Dakowska – Sciences Po Aix</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a
+              href="https://www.sciencespo.fr/ceri/fr/annuaire/lequesne-christian/"
+              target="_blank"
+              >Prof. Dr. Christian Lequesne – Sciences Po</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a
+              href="https://espol.school/en/team/pierre-haroche/"
+              target="_blank"
+              >Assoc. Prof. Dr. Pierre Haroche – Université catholique de
+              Lille</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a
+              href="https://www.sciencespo-lyon.fr/personnel/cecile-robert/"
+              target="_blank"
+              >Prof. Dr. Cécile Robert – Sciences Po Lyon</a
+            >
+          </li>
+        </ul>
+      </div>
+      <button
+        id="13"
+        class="w-full flex justify-between items-center py-6 text-slate-800 border-b border-slate-300 hover:text-blue-400"
+      >
+        Learning about EU
+      </button>
+      <div
+        class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+      >
+        <ul class="list-disc">
+          <li class="hover:text-blue-400">
+            <a
+              href="https://france.representation.ec.europa.eu/points-de-contact-en-france_fr"
+              target="_blank"
+              >National Europedirect office </a
+            >
+          </li>
+        </ul>
+      </div>
+      <button
+        id="14"
+        class="w-full flex justify-between items-center py-6 text-slate-800 border-b border-slate-300 hover:text-blue-400"
+      >
+        Think Tanks
+      </button>
+      <div
+        class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+      >
+        <ul class="list-disc">
+          <li class="hover:text-blue-400">
+            <a href="https://www.ifri.org/fr" target="_blank">Think Tank</a>
+          </li>
+          <li class="hover:text-blue-400">
+            <a href="https://www.frstrategie.org/" target="_blank"
+              >Think Tank</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a href="https://www.institutmontaigne.org/en" target="_blank"
+              >Think Tank</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a href="https://www.ofce.fr/" target="_blank">Think Tank</a>
+          </li>
+          <li class="hover:text-blue-400">
+            <a href="https://cae-eco.fr/" target="_blank">Think Tank</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--Right pane-->
+    <div>
+      <div
+        id="contentdiv-11"
+        class="pt-6 contentdiv overflow-hidden transition-all duration-300 ease-in-out"
+      >
+        <ul class="list-disc pl-4 text-slate-500">
+          <li class="hover:text-blue-400">
+            <a
+              href="https://ue.diplomatie.gouv.fr/representation-permanente-de-la-france-aupres-de-lunion-europeenne"
+              target="_blank"
+              >Federal Council</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a href="https://www.diplomatie.gouv.fr/en" target="_blank"
+              >Ministry</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a
+              href="https://www.assemblee-nationale.fr/dyn/europe-et-international"
+              target="_blank"
+              >National parliament – EU committee(s) </a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a
+              href="https://onu.delegfrance.org/-France-at-the-United-Nations-"
+              target="_blank"
+              >PermRep</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div
+        id="contentdiv-12"
+        class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+      >
+        <ul class="list-disc pl-4 text-slate-500">
+          <li class="hover:text-blue-400">
+            <a
+              href="https://www.sciencespo.fr/cevipof/fr/annuaire/costa-olivier/"
+              target="_blank"
+              >Dr. Olivier Costa – Sciences Po / CNRS</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a
+              href="https://www.sciencespo-aix.fr/en/teachers/dorota-dakowska/"
+              target="_blank"
+              >Prof. Dr. Dorota Dakowska – Sciences Po Aix</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a
+              href="https://www.sciencespo.fr/ceri/fr/annuaire/lequesne-christian/"
+              target="_blank"
+              >Prof. Dr. Christian Lequesne – Sciences Po</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a
+              href="https://espol.school/en/team/pierre-haroche/"
+              target="_blank"
+              >Assoc. Prof. Dr. Pierre Haroche – Université catholique de
+              Lille</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a
+              href="https://www.sciencespo-lyon.fr/personnel/cecile-robert/"
+              target="_blank"
+              >Prof. Dr. Cécile Robert – Sciences Po Lyon</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div
+        id="contentdiv-13"
+        class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+      >
+        <ul class="list-disc pl-4 text-slate-500">
+          <li class="hover:text-blue-400">
+            <a
+              href="https://france.representation.ec.europa.eu/points-de-contact-en-france_fr"
+              target="_blank"
+              >National Europedirect office </a
+            >
+          </li>
+        </ul>
+      </div>
+      <div
+        id="contentdiv-14"
+        class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
+      >
+        <ul class="list-disc pl-4 text-slate-500">
+          <li class="hover:text-blue-400">
+            <a href="https://www.ifri.org/fr" target="_blank">Think Tank</a>
+          </li>
+          <li class="hover:text-blue-400">
+            <a href="https://www.frstrategie.org/" target="_blank"
+              >Think Tank</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a href="https://www.institutmontaigne.org/en" target="_blank"
+              >Think Tank</a
+            >
+          </li>
+          <li class="hover:text-blue-400">
+            <a href="https://www.ofce.fr/" target="_blank">Think Tank</a>
+          </li>
+          <li class="hover:text-blue-400">
+            <a href="https://cae-eco.fr/" target="_blank">Think Tank</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  class="mx-auto mt-12 max-w-5xl px-6 py-6 md:grid md:grid-cols-2 md:gap-6"
+>
+  <div>
+    <div class="text-blue-950 text-xl font-medium">Readings</div>
+    <button
+      id="21"
+      class="w-full flex justify-between items-center border-b border-slate-300 hover:text-blue-400 text-blue-950"
+    >
+      <div class="flex items-center gap-4 mt-4 mb-4">
+        <!-- {{ with resources.Get "images/core.png" }}
+        <img
+          class="inline h-20 w-20 shrink-0 rounded-sm object-cover m-4"
+          src="{{ .RelPermalink }}"
+          alt="Core Readings"
+        />
+        {{ end }} -->
+        <div class="rounded border border-slate-300 h-20 w-20">
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-8 m-auto h-20 w-20"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="inline">Core Readings</div>
+      </div>
+      <span
+        id="icon-10"
+        class="text-slate-800 transition-transform duration-300"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          o
+          server
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          class="w-4 h-4"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      id="contentdiv-21"
+      class="contentdiv overflow-hidden transition-all duration-300 ease-in-out pb-5 text-slate-500"
+    >
+      <div id="core-readings">
+        <div class="pt-6">
+          {{ $tag := "*"}} {{ $data := dict }} {{ $url :=
+          "https://api.zotero.org/groups/5275576/collections/PYF6KLNM/items/top?key=4VZQylYN3cvHstKvuUxBXCJL&format=json"
+          }}{{ with try (resources.GetRemote $url) }} {{ with .Err }} {{ errorf
+          "%s" . }} {{ else with .Value }} {{ $data = .Content |
+          transform.Unmarshal }} {{ end }} {{ end }}
+          <ul class="pl-4 list-disc">
+            {{ range $data }} {{ $bookdata := . }} {{ $tags := .data.tags }} {{
+            range $tags }} {{ if eq .tag $tag }}
+            <li class="hover:text-blue-400">
+              <a href="{{ $bookdata.data.url }}" target="_blank">
+                {{ $pubAuthors := $bookdata.data.creators }}{{ range $pubAuthors
+                }}{{ print .lastName ", " .firstName " - " }}{{ end }} {{
+                $pubTitle := $bookdata.data.title }} {{ $pubBookTitle :=
+                $bookdata.data.bookTitle }} {{ $pubYear := $bookdata.data.date
+                }} {{ with $pubTitle }}<span class="font-medium">{{ . }}</span
+                >{{ end }} {{ with $pubBookTitle }}<i>{{ . }}</i>{{ end }} {{
+                with $pubYear }}({{ substr . 0 4 }}){{ end }}</a
+              >
+            </li>
+            {{ end }} {{ end }} {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <button
+      id="22"
+      class="w-full flex justify-between items-center py-6 border-b border-slate-300 text-blue-950 hover:text-blue-400"
+    >
+      <div class="flex items-center gap-4 mt-4 mb-4">
+        <!--
+        {{ with resources.Get "images/national-coordination.png" }}
+        <img
+          class="inline h-20 w-20 shrink-0 rounded-sm object-cover"
+          src="{{ .RelPermalink }}"
+          alt="National Coordination"
+        />
+        {{ end }}>
+        -->
+        <div class="rounded border border-slate-300 h-20 w-20">
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-8 m-auto h-20 w-20"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="inline">National coordination</div>
+      </div>
+      <span
+        id="icon-12"
+        class="text-slate-800 transition-transform duration-300"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          class="w-4 h-4"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      id="contentdiv-22"
+      class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-slate-500"
+    >
+      <div id="national-coordination">
+        <div class="pt-6">
+          {{ $tag := "National coordination"}} {{ $data := dict }} {{ $url :=
+          "https://api.zotero.org/groups/5275576/collections/PYF6KLNM/items/top?key=4VZQylYN3cvHstKvuUxBXCJL&format=json"
+          }}{{ with try (resources.GetRemote $url) }} {{ with .Err }} {{ errorf
+          "%s" . }} {{ else with .Value }} {{ $data = .Content |
+          transform.Unmarshal }} {{ end }} {{ end }}
+          <ul class="pl-4 list-disc">
+            {{ range $data }} {{ $bookdata := . }} {{ $tags := .data.tags }} {{
+            range $tags }} {{ if eq .tag $tag }}
+            <li class="hover:text-blue-400">
+              <a href="{{ $bookdata.data.url }}" target="_blank">
+                {{ $pubAuthors := $bookdata.data.creators }}{{ range $pubAuthors
+                }}{{ print .lastName ", " .firstName " - " }}{{ end }}{{
+                $pubTitle := $bookdata.data.title }} {{ $pubBookTitle :=
+                $bookdata.data.bookTitle }} {{ $pubYear := $bookdata.data.date
+                }} {{ with $pubTitle }}<span class="font-medium">{{ . }}</span
+                >{{ end }} {{ with $pubBookTitle }}<i>{{ . }}</i>{{ end }} {{
+                with $pubYear }}({{ substr . 0 4 }}){{ end }}</a
+              >
+            </li>
+            {{ end }} {{ end }} {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <button
+      id="23"
+      class="w-full flex justify-between items-center py-6 border-b border-slate-300 hover:text-blue-400 text-blue-950"
+    >
+      <div class="flex items-center gap-4 mt-4 mb-4">
+        <!--
+        {{ with resources.Get "images/national-institutions.png" }}
+        <img
+          class="inline h-20 w-20 shrink-0 rounded-sm object-cover"
+          src="{{ .RelPermalink }}"
+          alt="National Institutions"
+        />
+        {{ end }}
+        -->
+        <div class="rounded border border-slate-300 h-20 w-20">
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-8 m-auto h-20 w-20"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="inline">National Institutions</div>
+      </div>
+      <span
+        id="icon-13"
+        class="text-slate-800 transition-transform duration-300"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          class="w-4 h-4"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      id="contentdiv-23"
+      class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-slate-500"
+    >
+      <div id="national-institutions">
+        <div class="pt-6">
+          {{ $tag := "National Institutions"}} {{ $data := dict }} {{ $url :=
+          "https://api.zotero.org/groups/5275576/collections/PYF6KLNM/items/top?key=4VZQylYN3cvHstKvuUxBXCJL&format=json"
+          }}{{ with try (resources.GetRemote $url) }} {{ with .Err }} {{ errorf
+          "%s" . }} {{ else with .Value }} {{ $data = .Content |
+          transform.Unmarshal }} {{ end }} {{ end }}
+          <ul class="pl-4 list-disc">
+            {{ range $data }} {{ $bookdata := . }} {{ $tags := .data.tags }} {{
+            range $tags }} {{ if eq .tag $tag }}
+            <li class="hover:text-blue-400">
+              <a href="{{ $bookdata.data.url }}" target="_blank">
+                {{ $pubAuthors := $bookdata.data.creators }}{{ range $pubAuthors
+                }}{{ print .lastName ", " .firstName " - " }}{{ end }}{{
+                $pubTitle := $bookdata.data.title }} {{ $pubBookTitle :=
+                $bookdata.data.bookTitle }} {{ $pubYear := $bookdata.data.date
+                }} {{ with $pubTitle }}<span class="font-medium">{{ . }}</span
+                >{{ end }} {{ with $pubBookTitle }}<i>{{ . }}</i>{{ end }} {{
+                with $pubYear }}({{ substr . 0 4 }}){{ end }}</a
+              >
+            </li>
+            {{ end }} {{ end }} {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <button
+      id="24"
+      class="w-full flex justify-between items-center py-6 border-b border-slate-300 hover:text-blue-400 text-blue-950"
+    >
+      <div class="flex items-center gap-4 mt-4 mb-4">
+        <!--
+        {{ with resources.Get "images/accession-eu.png" }}
+        <img
+          class="inline h-20 w-20 shrink-0 rounded-sm object-cover"
+          src="{{ .RelPermalink }}"
+          alt="European Institutions"
+        />
+        {{ end }}
+        -->
+        <div class="rounded border border-slate-300 h-20 w-20">
+          <span
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-8 m-auto h-20 w-20"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m20.893 13.393-1.135-1.135a2.252 2.252 0 0 1-.421-.585l-1.08-2.16a.414.414 0 0 0-.663-.107.827.827 0 0 1-.812.21l-1.273-.363a.89.89 0 0 0-.738 1.595l.587.39c.59.395.674 1.23.172 1.732l-.2.2c-.212.212-.33.498-.33.796v.41c0 .409-.11.809-.32 1.158l-1.315 2.191a2.11 2.11 0 0 1-1.81 1.025 1.055 1.055 0 0 1-1.055-1.055v-1.172c0-.92-.56-1.747-1.414-2.089l-.655-.261a2.25 2.25 0 0 1-1.383-2.46l.007-.042a2.25 2.25 0 0 1 .29-.787l.09-.15a2.25 2.25 0 0 1 2.37-1.048l1.178.236a1.125 1.125 0 0 0 1.302-.795l.208-.73a1.125 1.125 0 0 0-.578-1.315l-.665-.332-.091.091a2.25 2.25 0 0 1-1.591.659h-.18c-.249 0-.487.1-.662.274a.931.931 0 0 1-1.458-1.137l1.411-2.353a2.25 2.25 0 0 0 .286-.76m11.928 9.869A9 9 0 0 0 8.965 3.525m11.928 9.868A9 9 0 1 1 8.965 3.525"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="inline">European Institutions</div>
+      </div>
+      <span
+        id="icon-14"
+        class="text-slate-800 transition-transform duration-300"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 16 16"
+          fill="currentColor"
+          class="w-4 h-4"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </span>
+    </button>
+    <div
+      id="contentdiv-24"
+      class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-slate-500"
+    >
+      <div id="european-institutions">
+        <div class="pt-6">
+          {{ $tag := "European institutions"}} {{ $data := dict }} {{ $url :=
+          "https://api.zotero.org/groups/5275576/collections/PYF6KLNM/items/top?key=4VZQylYN3cvHstKvuUxBXCJL&format=json"
+          }}{{ with try (resources.GetRemote $url) }} {{ with .Err }} {{ errorf
+          "%s" . }} {{ else with .Value }} {{ $data = .Content |
+          transform.Unmarshal }} {{ end }} {{ end }}
+          <ul class="pl-4 list-disc">
+            {{ range $data }} {{ $bookdata := . }} {{ $tags := .data.tags }} {{
+            range $tags }} {{ if eq .tag $tag }}
+            <li class="hover:text-blue-400">
+              <a href="{{ $bookdata.data.url }}" target="_blank">
+                {{ $pubAuthors := $bookdata.data.creators }}{{ range $pubAuthors
+                }}{{ print .lastName ", " .firstName " - " }}{{ end }}{{
+                $pubTitle := $bookdata.data.title }} {{ $pubBookTitle :=
+                $bookdata.data.bookTitle }} {{ $pubYear := $bookdata.data.date
+                }} {{ with $pubTitle }}<span class="font-medium">{{ . }}</span
+                >{{ end }} {{ with $pubBookTitle }}<i>{{ . }}</i>{{ end }} {{
+                with $pubYear }}({{ substr . 0 4 }}){{ end }}</a
+              >
+            </li>
+            {{ end }} {{ end }} {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Media -->
+  <div>
+    <div class="text-blue-950 text-xl font-medium pb-4">Media</div>
+    <div id="content-11">
+      <div class="pb-4 text-slate-500">
+        <!--Merging rss feeds from two media sources-->
+        {{ $rss1 := dict }} {{ $rss2 := dict }} {{ $url :=
+        "https://www.lefigaro.fr/rss/figaro_international.xml?v=2" }} {{ with
+        try (resources.GetRemote $url) }} {{ with .Err }} {{ errorf "%s" . }} {{
+        else with .Value }} {{ $rss1 = .Content | transform.Unmarshal }} {{ else
+        }} {{ errorf "Unable to get remote resource %q" $url }} {{ end }} {{ end
+        }} {{ $url := "https://www.lemonde.fr/europe/rss_full.xml?v=2" }} {{
+        with try (resources.GetRemote $url) }} {{ with .Err }} {{ errorf "%s" .
+        }} {{ else with .Value }} {{ $rss2 = .Content | transform.Unmarshal }}
+        {{ else }} {{ errorf "Unable to get remote resource %q" $url }} {{ end
+        }} {{ end }} {{ $rss := merge $rss1 $rss2}}
+        <ul class="space-y-4">
+          {{ range sort $rss.channel.item "pubDate" "desc" }} {{ if or
+          (strings.Contains .title "Europ") (strings.Contains .title "europ")
+          (strings.Contains .description "Europ") (strings.Contains .description
+          "europ")}} {{ $newsitem := . }}
+          <li class="block">
+            {{ $media_url := index $newsitem.content "-url" }}
+            <div>
+              <img
+                class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
+                src="{{ $media_url }}"
+              />
+
+              <span
+                class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
+                >{{ if strings.Contains $newsitem.link "lemonde" }}Le Monde{{
+                end }}{{ if strings.Contains $newsitem.link "lefigaro" }}Le
+                Figaro{{ end }}</span
+              >
+              <a href="{{ $newsitem.link }}" target="_blank"
+                >{{ $newsitem.title }} ({{ $newsitem.pubDate | time.Format
+                ":date_long" }})</a
+              >: <span class="text-sm">{{ $newsitem.description }}</span>
+            </div>
+          </li>
+          {{ end }}{{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const readMoreButtons = document.querySelectorAll(".btn-read-more");
+  const tabLabels = document.querySelectorAll(".tablabel");
+  const tabDivs = document.querySelectorAll(".tabdiv");
+  const toggleButtons = document.querySelectorAll("button");
+  const contentDivs = document.querySelectorAll(".contentdiv");
+
+  // SVG for Down icon
+  const downSVG = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+        </svg>
+      `;
+
+  // SVG for Up icon
+  const upSVG = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+        </svg>
+      `;
+
+  // Add EventListener to tablabel
+  tabLabels.forEach((tablabel) => {
+    tablabel.addEventListener("click", function (event) {
+      // Remove stylng from all tablabels
+      tabLabels.forEach((tablabel) => {
+        tablabel.classList.remove("text-blue-400");
+        tablabel.classList.remove("border-blue-400");
+        tablabel.classList.add("text-blue-950");
+        tablabel.classList.add("border-transparent");
+      });
+      // Add styling to clicked element
+      const targetElement = event.target;
+      targetElement.classList.remove("text-blue-950");
+      targetElement.classList.add("text-blue-400");
+      targetElement.classList.add("border-blue-400");
+
+      // Hide all tabdivs
+      tabDivs.forEach((tabdiv) => {
+        tabdiv.classList.add("hidden");
+      });
+
+      // Show related tabdiv
+      const tabId = event.target.id;
+      const tabDiv = document.getElementById(`tabdiv-${tabId}`);
+      tabDiv.classList.remove("hidden");
+    });
+  });
+
+  // Add EventListener to readmore btn
+  readMoreButtons.forEach((readmorebutton) => {
+    readmorebutton.addEventListener("click", function () {
+      readmorebutton.textContent =
+        readmorebutton.textContent.trim() === "Read more"
+          ? "Read less"
+          : "Read more";
+    });
+  });
+
+  function removeClassStartingWith(el, prefix) {
+    /*var classes = el.className.split(" ").filter(function (v) {
+      return v.lastIndexOf(prefix, 0) !== 0;
+    });
+    el.className = classes.join(" ").trim();*/
+    for (let i = el.classList.length - 1; i >= 0; i--) {
+      const className = el.classList[i];
+      if (className.startsWith(prefix)) {
+        el.classList.remove(className);
+      }
+    }
+  }
+
+  // Add event listener to buttons
+  toggleButtons.forEach((togglebutton) => {
+    togglebutton.addEventListener("click", function (event) {
+      const contentId = event.currentTarget.id;
+      const contentDiv = document.getElementById(`contentdiv-${contentId}`);
+      const icon = document.getElementById(`icon-${contentId}`);
+
+      // Set 'max-h-0' to contentDiv when max-h is not 0
+      if (!contentDiv.classList.contains("max-h-0")) {
+        removeClassStartingWith(contentDiv, "max-h");
+        contentDiv.classList.add("max-h-0");
+        if (icon) icon.innerHTML = downSVG;
+        // If contentDiv has max-h = 0
+      } else {
+        // Remove class starting with 'max-h' and add 'max-h-0' for all contentDivs
+        contentDivs.forEach((contentdiv) => {
+          removeClassStartingWith(contentdiv, "max-h");
+          contentdiv.classList.add("max-h-0");
+        });
+        // Remove 'max-h-0' and add 'max-h-[px]' to contentDiv
+        contentDiv.classList.remove("max-h-0");
+        var scrollHeight = contentDiv.scrollHeight;
+        contentDiv.classList.add("max-h-[" + scrollHeight + "px]");
+        if (icon) icon.innerHTML = upSVG;
+      }
+    });
+  });
+
+  function openTab(tabName, clickedElement) {
+    const tablabels = document.querySelectorAll(".tablabel");
+    const tabcontents = document.querySelectorAll(".tabcontent");
+
+    tabcontents.forEach((tabcontent) => {
+      tabcontent.style.display = "none";
+    });
+    tablabels.forEach((tablabel) => {
+      tablabel.classList.remove("text-blue-950");
+      tablabel.classList.add("border-transparent");
+    });
+    document.getElementById(tabName).style.display =
+      tabName === "links" ? "grid" : "block";
+    clickedElement.classList.add("text-blue-950");
+    clickedElement.classList.remove("border-transparent");
+  }
+</script>
+
+{{ end }}

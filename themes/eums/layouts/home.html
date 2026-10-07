@@ -1,0 +1,136 @@
+{{ define "main" }}
+<!-- 
+  {{ .Content }}
+  {{ range site.RegularPages }}
+    <section>
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      {{ .Summary }}
+    </section>
+  {{ end }}
+-->
+
+<!--Project description -->
+<!--
+<div class="mx-auto mt-6 flex max-w-5xl px-6 sm:gap-x-6">
+  <div class="hidden sm:block sm:w-1/2">
+    {{ with resources.Get "images/map-of-europe.jpg" }}
+    <img
+      src="{{ .RelPermalink }}"
+      class="aspect-square w-full rounded-lg object-cover shadow-2xl"
+    />
+    {{ end }}
+  </div>
+-->
+<!-- Project description -->
+<!--
+  <div class="sm:w-1/2">
+    <h1 class="px-2 text-2xl font-semibold text-blue-950">
+      {{ .Param "heading_project_description" }}
+    </h1>
+    <div class="mt-2 p-2 text-gray-700">{{ .Content }}</div>
+    <a
+      href="{{ .Site.BaseURL }}/about"
+      class="mx-2 inline-block rounded bg-green-700 px-4 py-2 text-white shadow-lg hover:bg-green-800"
+      >{{ .Param "button_read_more" }}</a
+    >
+  </div>
+</div>
+-->
+<div id="chartdiv" class="m-0 h-250 w-full mx-auto mt-6 max-w-5xl">
+  <div class="sm:w-1/2">
+    <h1 class="px-2 text-2xl font-semibold text-blue-950">
+      {{ .Param "heading_project_description" }}
+    </h1>
+    <div class="mt-2 p-2 text-gray-700">{{ .Content }}</div>
+    <a
+      href="{{ .Site.BaseURL }}/about"
+      class="mx-2 inline-block rounded bg-green-700 px-4 py-2 text-white shadow-lg hover:bg-green-800"
+      >{{ .Param "button_read_more" }}</a
+    >
+  </div>
+</div>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script>
+  am5.ready(function () {
+    const root = am5.Root.new("chartdiv");
+    root.setThemes([am5themes_Animated.new(root)]);
+
+    const chart = root.container.children.push(
+      am5map.MapChart.new(root, {
+        projection: am5map.geoMercator(),
+        panX: "rotateX",
+        wheelY: "zoom",
+      }),
+    );
+
+    const euCountries = [
+      "AT",
+      "BE",
+      "BG",
+      "HR",
+      "CY",
+      "CZ",
+      "DK",
+      "EE",
+      "FI",
+      "FR",
+      "DE",
+      "GR",
+      "HU",
+      "IE",
+      "IT",
+      "LV",
+      "LT",
+      "LU",
+      "MT",
+      "NL",
+      "PL",
+      "PT",
+      "RO",
+      "SK",
+      "SI",
+      "ES",
+      "SE",
+    ];
+
+    const polygonSeries = chart.series.push(
+      am5map.MapPolygonSeries.new(root, {
+        geoJSON: am5geodata_worldLow,
+        include: euCountries,
+      }),
+    );
+
+    polygonSeries.mapPolygons.template.setAll({
+      tooltipText: "{name}",
+      interactive: true,
+      fill: am5.color(0x2f80ed),
+      stroke: am5.color(0xffffff),
+      strokeWidth: 1,
+    });
+
+    polygonSeries.mapPolygons.template.states.create("hover", {
+      fill: am5.color(0xf2994a),
+    });
+
+    polygonSeries.mapPolygons.template.events.on("click", function (event) {
+      const country = event.target.dataItem.dataContext;
+      if (country.name.toLowerCase() === "france") {
+        open("/countries/" + country.name.toLowerCase(), "_blank");
+      } else {
+        // alert("You clicked " + country.name);
+        alert(
+          "The " +
+            country.name +
+            " page is still under construction. Please try the France page instead.",
+        );
+      }
+    });
+
+    chart.appear(1000, 100);
+  });
+</script>
+
+{{ end }}

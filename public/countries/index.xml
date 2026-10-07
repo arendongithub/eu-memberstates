@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Countries on EU Memberstates</title>
+    <link>http://localhost:1313/countries/</link>
+    <description>Recent content in Countries on EU Memberstates</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Sep 2026 09:00:00 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/countries/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>France</title>
+      <link>http://localhost:1313/countries/france/</link>
+      <pubDate>Tue, 01 Sep 2026 09:00:00 -0700</pubDate>
+      <guid>http://localhost:1313/countries/france/</guid>
+      <description>&lt;p&gt; &lt;/p&gt;&#xA;&lt;p&gt;Accounting for about 17–18% of EU GDP, France is the Union’s second-largest economy and a net contributor to the EU budget. Yet, given the political importance of the agriculture sector, it benefits from the Common Agricultural Policy more than any other state. Around 60% of French trade is with other EU countries France was a founding member of the eurozone in 1999. The economy is dominated by services but retains a strong industrial base in aerospace, defense, automobiles, luxury goods, pharmaceuticals and energy. Its energy position is strengthened by nuclear power.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

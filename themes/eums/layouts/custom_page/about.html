@@ -1,0 +1,103 @@
+{{ define "main" }}
+
+<!-- Project Description -->
+<section class="py-6">
+  <div class="mx-auto max-w-5xl px-6">
+    <h1 class="m-12 text-center text-4xl font-semibold text-blue-400">
+      {{ .Param "heading_project" }}
+    </h1>
+    <div class="mx-auto flex max-w-5xl px-6">
+      <div class="text-base text-gray-900">{{ .Content }}</div>
+    </div>
+  </div>
+</section>
+
+<hr class="mx-auto my-12 max-w-5xl border-t border-gray-300 px-6" />
+
+<section class="py-6">
+  <div class="mx-auto max-w-5xl px-6">
+    <div class="mb-12">
+      <h1 class="text-center text-4xl font-semibold text-blue-400">
+        {{ .Param "heading_team" }}
+      </h1>
+    </div>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="group block lg:col-span-1">
+        <div class="relative mb-6">
+          <img
+            src='{{ with .Resources.Get "img/johan-adriaensen.jpeg" }}{{ .RelPermalink }}{{ end }}'
+            alt='{{ .Param "johan" }}'
+            class="mx-auto h-40 w-40 rounded-full border border-solid border-transparent object-cover transition-all duration-500 group-hover:border-blue-400"
+          />
+        </div>
+        <h3
+          class="mb-2 text-center text-xl font-semibold text-gray-900 capitalize transition-all duration-500 group-hover:text-blue-400"
+        >
+          {{ .Param "johan" }}
+        </h3>
+        <span
+          class="block text-center text-gray-400 transition-all duration-500 group-hover:text-gray-900"
+          >{{ $html := .Param "johan_affiliation" }}{{ $html | safeHTML }}</span
+        >
+        <a
+          href="#"
+          class="block text-center text-blue-400 transition-colors duration-300 hover:text-blue-600"
+          >{{ .Param "link_profile_text" }}</a
+        >
+        <div class="text-sm text-gray-500">{{ .Param "johan_bio" }}</div>
+      </div>
+      <div class="group block lg:col-span-1">
+        <div class="relative mb-6">
+          <img
+            src='{{ with .Resources.Get "img/maia-iglesias.png" }}{{ .RelPermalink }}{{ end }}'
+            alt='{{ .Param "odile" }}'
+            class="mx-auto h-40 w-40 rounded-full border border-solid border-transparent object-cover object-top transition-all duration-500 group-hover:border-blue-400"
+          />
+        </div>
+        <h3
+          class="mb-2 text-center text-xl font-semibold text-gray-900 capitalize transition-all duration-500 group-hover:text-blue-400"
+        >
+          {{ .Param "maia" }}
+        </h3>
+        <span
+          class="block text-center text-gray-400 transition-all duration-500 group-hover:text-gray-900"
+          >{{ $html := .Param "maia_affiliation" }}{{ $html | safeHTML }}</span
+        >
+        <a
+          href="#"
+          class="block text-center text-blue-400 transition-colors duration-300 hover:text-blue-600"
+          >{{ .Param "link_profile_text" }}</a
+        >
+        <div class="text-sm text-gray-500">{{ .Param "maia_bio" }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-6">
+  <div class="mx-auto max-w-5xl px-6">
+    <h3 class="mb-2 text-xl font-semibold text-gray-900">
+      {{ .Param "heading_students" }}
+    </h3>
+    <div class="mt-6 sm:flex sm:gap-6">
+      <div class="text-base text-gray-500">
+        <p>{{ .Param "students_body" }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-6">
+  <div class="mx-auto max-w-5xl px-6">
+    <h3 class="mb-2 text-xl font-semibold text-gray-900">
+      {{ .Param "heading_financial_support" }}
+    </h3>
+    <div class="mt-6 sm:flex sm:gap-6">
+      <div class="text-base text-gray-500">
+        <p>{{ .Param "financial_support_body" }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}
