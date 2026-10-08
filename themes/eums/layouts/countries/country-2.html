@@ -38,7 +38,7 @@
           class="tablabel inline-block py-4 border-b text-blue-400 border-blue-400"
           id="1"
         >
-          Description
+          Introducing {{ .Title }}
         </div>
       </li>
       <li>
@@ -46,7 +46,7 @@
           class="tablabel inline-block border-transparent py-4 border-b text-blue-950 hover:text-blue-400 hover:border-blue-400"
           id="2"
         >
-          Institution Links
+          Explore key actors
         </div>
       </li>
     </ul>
@@ -786,7 +786,7 @@
           : "Read more";
     });
   });
-
+  /*
   elBlue950s.forEach((elBlue950) => {
     elBlue950.addEventListener("click", function (event) {
       // Remove text-blue-400
@@ -801,7 +801,7 @@
       targetElement.classList.add("text-blue-400");
     });
   });
-
+*/
   function removeClassStartingWith(el, prefix) {
     /*var classes = el.className.split(" ").filter(function (v) {
         return v.lastIndexOf(prefix, 0) !== 0;
@@ -818,9 +818,18 @@
   // Add event listener to buttons
   toggleButtons.forEach((togglebutton) => {
     togglebutton.addEventListener("click", function (event) {
-      const contentId = event.currentTarget.id;
+      const targetElement = event.currentTarget;
+      const contentId = targetElement.id;
       const contentDiv = document.getElementById(`contentdiv-${contentId}`);
       const icon = document.getElementById(`icon-${contentId}`);
+
+      const blue400Buttons = document.querySelectorAll("button.text-blue-400");
+      blue400Buttons.forEach((blue400Button) => {
+        blue400Button.classList.remove("text-blue-400");
+        blue400Button.classList.add("text-blue-950");
+      });
+      targetElement.classList.remove("text-blue-950");
+      targetElement.classList.add("text-blue-400");
 
       // Set 'max-h-0' to contentDiv when max-h is not 0
       if (!contentDiv.classList.contains("max-h-0")) {

@@ -133,7 +133,7 @@
           class="tablabel inline-block py-4 border-b text-blue-400 border-blue-400"
           id="1"
         >
-          Description
+          Introducing France
         </div>
       </li>
       <li>
@@ -141,7 +141,7 @@
           class="tablabel inline-block border-transparent py-4 border-b text-blue-950 hover:text-blue-400 hover:border-blue-400"
           id="2"
         >
-          Institution Links
+          Explore key actors
         </div>
       </li>
     </ul>
@@ -935,21 +935,7 @@
           : "Read more";
     });
   });
-
-  elBlue950s.forEach((elBlue950) => {
-    elBlue950.addEventListener("click", function (event) {
-      
-      const elBlue400s = document.querySelectorAll("button.text-blue-400");
-      elBlue400s.forEach((elBlue400) => {
-        elBlue400.classList.remove("text-blue-400");
-        elBlue400.classList.add("text-blue-950");
-      });
-      
-      const targetElement = event.currentTarget;
-      targetElement.classList.remove("text-blue-950");
-      targetElement.classList.add("text-blue-400");
-    });
-  });
+  
 
   function removeClassStartingWith(el, prefix) {
     
@@ -965,9 +951,18 @@
   
   toggleButtons.forEach((togglebutton) => {
     togglebutton.addEventListener("click", function (event) {
-      const contentId = event.currentTarget.id;
+      const targetElement = event.currentTarget;
+      const contentId = targetElement.id;
       const contentDiv = document.getElementById(`contentdiv-${contentId}`);
       const icon = document.getElementById(`icon-${contentId}`);
+
+      const blue400Buttons = document.querySelectorAll("button.text-blue-400");
+      blue400Buttons.forEach((blue400Button) => {
+        blue400Button.classList.remove("text-blue-400");
+        blue400Button.classList.add("text-blue-950");
+      });
+      targetElement.classList.remove("text-blue-950");
+      targetElement.classList.add("text-blue-400");
 
       
       if (!contentDiv.classList.contains("max-h-0")) {

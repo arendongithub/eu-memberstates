@@ -524,6 +524,15 @@
   .text-center {
     text-align: center;
   }
+  .font-\(family-name\:--acaslonpro\) {
+    font-family: var(--acaslonpro);
+  }
+  .font-\[acaslonpro\] {
+    font-family: acaslonpro;
+  }
+  .font-\[irvinheading\] {
+    font-family: irvinheading;
+  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
