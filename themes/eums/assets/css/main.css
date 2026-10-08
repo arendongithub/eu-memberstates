@@ -1,1 +1,22 @@
 @import "tailwindcss";
+@font-face {
+  font-family: "ACaslonPro";
+  src: url("../fonts/ACaslonPro-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IrvinHeading";
+  src: url("https://db.onlinewebfonts.com/t/1e44faec07b8b81f60a3215d76bd0086.woff2")
+    format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@theme {
+  --font-caslon: "ACaslonPro", Georgia, serif;
+  --font-irvin: "IrvinHeading", Georgia, serif;
+}
