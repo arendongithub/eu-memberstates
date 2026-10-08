@@ -125,20 +125,20 @@
 
 <section class="mx-auto mt-12 max-w-5xl px-6 py-6">
   
-  <div class="font-medium text-center text-body">
-    <ul class="flex flex-wrap">
-      <li class="hover:text-blue-400">
+  <div class="font-medium">
+    <ul class="flex flex-wrap gap-4">
+      <li>
         
         <div
-          class="tablabel inline-block p-4 text-blue-950 border-b hover:text-blue-400 hover:border-blue-400"
+          class="tablabel inline-block py-4 border-b text-blue-400 border-blue-400"
           id="1"
         >
           Description
         </div>
       </li>
-      <li class="hover:text-blue-400">
+      <li>
         <div
-          class="tablabel inline-block border-transparent p-4 text-blue-950 border-b hover:text-blue-400 hover:border-blue-400"
+          class="tablabel inline-block border-transparent py-4 border-b text-blue-950 hover:text-blue-400 hover:border-blue-400"
           id="2"
         >
           Institution Links
@@ -173,7 +173,7 @@
     <div>
       <button
         id="11"
-        class="w-full flex justify-between items-center py-6 text-slate-800 border-b border-slate-300 hover:text-blue-400"
+        class="w-full flex justify-between items-center py-6 border-b border-slate-300 text-blue-400"
       >
         Institutions
       </button>
@@ -211,7 +211,7 @@
       </div>
       <button
         id="12"
-        class="w-full flex justify-between items-center py-6 text-slate-800 border-b border-slate-300 hover:text-blue-400"
+        class="w-full flex justify-between items-center py-6 text-blue-950 border-b border-slate-300 hover:text-blue-400"
       >
         Academics
       </button>
@@ -259,7 +259,7 @@
       </div>
       <button
         id="13"
-        class="w-full flex justify-between items-center py-6 text-slate-800 border-b border-slate-300 hover:text-blue-400"
+        class="w-full flex justify-between items-center py-6 text-blue-950 border-b border-slate-300 hover:text-blue-400"
       >
         Learning about EU
       </button>
@@ -278,7 +278,7 @@
       </div>
       <button
         id="14"
-        class="w-full flex justify-between items-center py-6 text-slate-800 border-b border-slate-300 hover:text-blue-400"
+        class="w-full flex justify-between items-center py-6 text-blue-950 border-b border-slate-300 hover:text-blue-400"
       >
         Think Tanks
       </button>
@@ -315,7 +315,9 @@
         id="contentdiv-11"
         class="pt-6 contentdiv overflow-hidden transition-all duration-300 ease-in-out"
       >
-        <ul class="list-disc pl-4 text-slate-500">
+        <ul
+          class="ml-4 list-outside list-disc text-slate-500 border-l-4 border-blue-400 pl-6"
+        >
           <li class="hover:text-blue-400">
             <a
               href="https://ue.diplomatie.gouv.fr/representation-permanente-de-la-france-aupres-de-lunion-europeenne"
@@ -348,7 +350,9 @@
         id="contentdiv-12"
         class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
       >
-        <ul class="list-disc pl-4 text-slate-500">
+        <ul
+          class="ml-4 list-outside list-disc pl-6 border-blue-400 border-l-4 text-slate-500"
+        >
           <li class="hover:text-blue-400">
             <a
               href="https://www.sciencespo.fr/cevipof/fr/annuaire/costa-olivier/"
@@ -391,7 +395,9 @@
         id="contentdiv-13"
         class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
       >
-        <ul class="list-disc pl-4 text-slate-500">
+        <ul
+          class="ml-4 list-outside list-disc pl-6 border-blue-400 border-l-4 text-slate-500"
+        >
           <li class="hover:text-blue-400">
             <a
               href="https://france.representation.ec.europa.eu/points-de-contact-en-france_fr"
@@ -405,7 +411,9 @@
         id="contentdiv-14"
         class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
       >
-        <ul class="list-disc pl-4 text-slate-500">
+        <ul
+          class="ml-4 list-outside list-disc pl-6 border-blue-400 border-l-4 text-slate-500"
+        >
           <li class="hover:text-blue-400">
             <a href="https://www.ifri.org/fr" target="_blank">Think Tank</a>
           </li>
@@ -435,10 +443,10 @@
   class="mx-auto mt-12 max-w-5xl px-6 py-6 md:grid md:grid-cols-2 md:gap-6"
 >
   <div>
-    <div class="text-blue-950 text-xl font-medium">Readings</div>
+    <h1 class="text-blue-950 text-xl font-medium">Readings</h1>
     <button
       id="21"
-      class="w-full flex justify-between items-center border-b border-slate-300 hover:text-blue-400 text-blue-950"
+      class="w-full flex justify-between items-center border-b border-slate-300 text-blue-400"
     >
       <div class="flex items-center gap-4 mt-4 mb-4">
         
@@ -799,17 +807,53 @@
 
   
   <div>
-    <div class="text-blue-950 text-xl font-medium pb-4">Media</div>
+    <h1 class="text-blue-950 text-xl font-medium pb-4">Media</h1>
     <div id="content-11">
       <div class="pb-4 text-slate-500">
         
                    
           
         <ul class="space-y-4">
-            
+             
           <li class="block">
             
-            <div>
+            <div class="hover:text-blue-400">
+              <img
+                class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
+                src="https://img.lemde.fr/2026/10/07/507/0/7718/3859/644/322/60/0/aaa77de_ftp-1-efkunr56smmm-5287987-01-06.jpg"
+              />
+
+              <span
+                class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
+                >Le Monde</span
+              >
+              <a href="https://www.lemonde.fr/international/article/2026/10/07/entre-les-etats-unis-et-la-grece-une-alliance-et-une-cooperation-energetique-sans-precedent_6789648_3210.html" target="_blank"
+                >Entre les Etats-Unis et la Grèce, une alliance et une coopération énergétique sans précédent (October 7, 2026)</a
+              >: <span class="text-sm">En visite à Athènes, le secrétaire d’Etat américain, Marco Rubio, a appelé l’Europe à sortir de « sa torpeur » et a au contraire salué le rôle de la Grèce, « l’alliée [de Washington] face à la question migratoire et aux menaces terroristes ».</span>
+            </div>
+          </li>
+             
+          <li class="block">
+            
+            <div class="hover:text-blue-400">
+              <img
+                class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
+                src="https://img.lemde.fr/2026/10/06/342/0/5568/2784/644/322/60/0/339a895_ftp-1-mjvg0mcbzbvv-2026-10-06t112117z-1178191297-rc2mxnakzvdy-rtrmadp-3-bulgaria-incident.JPG"
+              />
+
+              <span
+                class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
+                >Le Monde</span
+              >
+              <a href="https://www.lemonde.fr/international/article/2026/10/07/les-attaques-de-drones-s-intensifient-en-mer-noire-au-large-de-la-bulgarie-et-la-roumanie_6789632_3210.html" target="_blank"
+                >Les attaques de drones s’intensifient en mer Noire au large de la Bulgarie et de la Roumanie (October 7, 2026)</a
+              >: <span class="text-sm">Ces pays membres de l’Union européenne et de l’OTAN, victimes indirectes de la guerre en Ukraine, sont en partie démunis pour protéger leurs côtes et les navires commerciaux qui circulent dans leur zone économique exclusive.</span>
+            </div>
+          </li>
+                     
+          <li class="block">
+            
+            <div class="hover:text-blue-400">
               <img
                 class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
                 src="https://img.lemde.fr/2026/10/06/187/0/7521/3760/644/322/60/0/81a4323_upload-1-jydq3pix4vpd-000-c8yd6g4.jpg"
@@ -820,101 +864,11 @@
                 >Le Monde</span
               >
               <a href="https://www.lemonde.fr/economie/article/2026/10/07/a-pekin-l-heure-de-verite-pour-le-commissaire-europeen-au-commerce-pour-contrer-l-envolee-des-exportations-chinoises-vers-l-europe_6789537_3234.html" target="_blank"
-                >A Pékin, l’heure de vérité pour le commissaire européen au commerce pour contrer l’envolée des exportations chinoises vers l’Europe (October 7, 2026)</a
-              >: <span class="text-sm">Maros Sefcovic se rend en Chine les 8 et 9 octobre dans le cadre du dialogue lancé avec son homologue chinois. Anticipant des résultats limités, Berlin et Paris commencent à préparer l’après.</span>
-            </div>
-          </li>
-                 
-          <li class="block">
-            
-            <div>
-              <img
-                class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
-                src="https://img.lemde.fr/2026/10/06/680/0/5477/2738/644/322/60/0/03927bf_upload-1-z8fxwxvbyiau-000-a6kd2ez-1.jpg"
-              />
-
-              <span
-                class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
-                >Le Monde</span
-              >
-              <a href="https://www.lemonde.fr/economie/article/2026/10/06/air-france-klm-met-en-avant-ses-retombees-economiques-en-europe-a-la-veille-de-la-decision-finale-sur-la-privatisation-de-tap-air-portugal_6789047_3234.html" target="_blank"
-                >Air France-KLM met en avant ses retombées économiques en Europe, à la veille de la décision finale sur la privatisation de TAP Air Portugal (October 6, 2026)</a
-              >: <span class="text-sm">La compagnie franco-néerlandaise aurait engendré 113 milliards d’euros de richesse produite dans l’Union européenne en 2025 et contribué à créer 1,2 million d’emplois directs et indirects, selon une étude économique publiée mardi.</span>
-            </div>
-          </li>
-            
-          <li class="block">
-            
-            <div>
-              <img
-                class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
-                src="https://img.lemde.fr/2026/10/06/611/0/4740/2370/644/322/60/0/537785a_upload-1-gbmj0i4ao7qf-rea10855426.jpg"
-              />
-
-              <span
-                class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
-                >Le Monde</span
-              >
-              <a href="https://www.lemonde.fr/economie/article/2026/10/06/dans-un-contexte-de-guerre-commerciale-avec-la-chine-l-arsenal-de-l-europe-se-renforce_6789029_3234.html" target="_blank"
-                >Dans un contexte de guerre commerciale avec la Chine, l’arsenal de l’Europe se renforce (October 6, 2026)</a
-              >: <span class="text-sm">L’Union européenne dispose déjà de nombreux instruments pour défendre ses industries face à la concurrence chinoise. Paris et Berlin appellent la Commission à les utiliser plus amplement et à les renforcer.</span>
+                >Maros Sefcovic, le commissaire européen au commerce, veut contrer l’envolée des exportations de la Chine vers l’Europe (October 7, 2026)</a
+              >: <span class="text-sm">Le commissaire au commerce et à la sécurité économique sera en visite à Pékin jeudi 8 et vendredi 9 octobre dans le cadre du dialogue lancé avec son homologue chinois. Anticipant des résultats limités, l’Allemagne et la France commencent déjà à préparer l’après.</span>
             </div>
           </li>
                 
-          <li class="block">
-            
-            <div>
-              <img
-                class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
-                src="https://img.lemde.fr/2026/10/06/504/0/6048/3024/644/322/60/0/24cb313_ftp-1-gyji118cl12b-3a95e903365145838ef1f9911962351f-0-4dd51bd3772449fa8c36bcd0e3e35878.jpg"
-              />
-
-              <span
-                class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
-                >Le Monde</span
-              >
-              <a href="https://www.lemonde.fr/international/article/2026/10/06/elargissement-la-commission-europeenne-veut-redonner-de-l-elan-a-une-dynamique-qui-s-essouffle_6789023_3210.html" target="_blank"
-                >Elargissement : la Commission européenne veut redonner de l’élan à une dynamique qui s’essouffle (October 6, 2026)</a
-              >: <span class="text-sm">L’exécutif communautaire a mis sur la table, mardi 6 octobre, des propositions pour faciliter l’intégration de l’Ukraine à l’Union européenne.</span>
-            </div>
-          </li>
-                
-          <li class="block">
-            
-            <div>
-              <img
-                class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
-                src="https://img.lemde.fr/2026/10/05/463/0/5562/2781/644/322/60/0/d4de8b2_upload-1-16zc2itx9fep-000-c8m33vd.jpg"
-              />
-
-              <span
-                class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
-                >Le Monde</span
-              >
-              <a href="https://www.lemonde.fr/economie/article/2026/10/06/les-constructeurs-chinois-veulent-produire-plus-d-un-million-de-voitures-en-europe-d-ici-a-2030_6788947_3234.html" target="_blank"
-                >Les constructeurs chinois veulent produire plus de 1 million de voitures en Europe d’ici à 2030 (October 6, 2026)</a
-              >: <span class="text-sm">SAIC, BYD, Chery, Geely et Leapmotor, les plus grands constructeurs automobiles chinois, multiplient leurs implantations dans des usines européennes. Leur part de marché sur le Vieux Continent, qui a doublé en un an, devrait atteindre 14 % en 2029.</span>
-            </div>
-          </li>
-            
-          <li class="block">
-            
-            <div>
-              <img
-                class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
-                src="https://img.lemde.fr/2026/10/05/0/0/5616/2808/644/322/60/0/6e2fc12_upload-1-3xw0jkq42bre-000-32ne4hw.jpg"
-              />
-
-              <span
-                class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
-                >Le Monde</span
-              >
-              <a href="https://www.lemonde.fr/economie/article/2026/10/06/pascal-lamy-ancien-directeur-de-l-omc-fait-son-mea-culpa-nous-avons-fait-une-erreur-de-parallaxe-historique-avec-la-chine_6788832_3234.html" target="_blank"
-                >Pascal Lamy, ancien directeur de l’OMC, fait son mea culpa : « Nous avons fait une erreur de parallaxe historique avec la Chine » (October 6, 2026)</a
-              >: <span class="text-sm">Dans un entretien au « Monde », l’ancien commissaire européen au commerce propose la mise en place d’un nouvel outil pour réduire les déséquilibres commerciaux avec Pékin.</span>
-            </div>
-          </li>
-           
         </ul>
       </div>
     </div>
@@ -927,20 +881,21 @@
   const tabDivs = document.querySelectorAll(".tabdiv");
   const toggleButtons = document.querySelectorAll("button");
   const contentDivs = document.querySelectorAll(".contentdiv");
+  const elBlue950s = document.querySelectorAll("button.text-blue-950");
 
   
   const downSVG = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-          <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-        </svg>
-      `;
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+          </svg>
+        `;
 
   
   const upSVG = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-          <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
-        </svg>
-      `;
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+          </svg>
+        `;
 
   
   tabLabels.forEach((tablabel) => {
@@ -953,8 +908,9 @@
         tablabel.classList.add("border-transparent");
       });
       
-      const targetElement = event.target;
+      const targetElement = event.currentTarget;
       targetElement.classList.remove("text-blue-950");
+      targetElement.classList.remove("border-transparent");
       targetElement.classList.add("text-blue-400");
       targetElement.classList.add("border-blue-400");
 
@@ -964,7 +920,7 @@
       });
 
       
-      const tabId = event.target.id;
+      const tabId = event.currentTarget.id;
       const tabDiv = document.getElementById(`tabdiv-${tabId}`);
       tabDiv.classList.remove("hidden");
     });
@@ -977,6 +933,21 @@
         readmorebutton.textContent.trim() === "Read more"
           ? "Read less"
           : "Read more";
+    });
+  });
+
+  elBlue950s.forEach((elBlue950) => {
+    elBlue950.addEventListener("click", function (event) {
+      
+      const elBlue400s = document.querySelectorAll("button.text-blue-400");
+      elBlue400s.forEach((elBlue400) => {
+        elBlue400.classList.remove("text-blue-400");
+        elBlue400.classList.add("text-blue-950");
+      });
+      
+      const targetElement = event.currentTarget;
+      targetElement.classList.remove("text-blue-950");
+      targetElement.classList.add("text-blue-400");
     });
   });
 

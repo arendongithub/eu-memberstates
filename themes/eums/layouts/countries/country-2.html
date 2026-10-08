@@ -27,23 +27,23 @@
 <!--SECTION - TABS - Country description | Links to institutions-->
 <section class="mx-auto mt-12 max-w-5xl px-6 py-6">
   <!--Tabs-->
-  <div class="font-medium text-center text-body">
-    <ul class="flex flex-wrap">
-      <li class="hover:text-blue-400">
+  <div class="font-medium">
+    <ul class="flex flex-wrap gap-4">
+      <li>
         <!--button
           onclick="openTab('description', this)"
           class="tablabel inline-block p-4 text-blue-950 border-b hover:text-blue-400 hover:border-blue-400"
       -->
         <div
-          class="tablabel inline-block p-4 text-blue-950 border-b hover:text-blue-400 hover:border-blue-400"
+          class="tablabel inline-block py-4 border-b text-blue-400 border-blue-400"
           id="1"
         >
           Description
         </div>
       </li>
-      <li class="hover:text-blue-400">
+      <li>
         <div
-          class="tablabel inline-block border-transparent p-4 text-blue-950 border-b hover:text-blue-400 hover:border-blue-400"
+          class="tablabel inline-block border-transparent py-4 border-b text-blue-950 hover:text-blue-400 hover:border-blue-400"
           id="2"
         >
           Institution Links
@@ -74,7 +74,7 @@
     <div>
       <button
         id="11"
-        class="w-full flex justify-between items-center py-6 text-slate-800 border-b border-slate-300 hover:text-blue-400"
+        class="w-full flex justify-between items-center py-6 border-b border-slate-300 text-blue-400"
       >
         Institutions
       </button>
@@ -112,7 +112,7 @@
       </div>
       <button
         id="12"
-        class="w-full flex justify-between items-center py-6 text-slate-800 border-b border-slate-300 hover:text-blue-400"
+        class="w-full flex justify-between items-center py-6 text-blue-950 border-b border-slate-300 hover:text-blue-400"
       >
         Academics
       </button>
@@ -160,7 +160,7 @@
       </div>
       <button
         id="13"
-        class="w-full flex justify-between items-center py-6 text-slate-800 border-b border-slate-300 hover:text-blue-400"
+        class="w-full flex justify-between items-center py-6 text-blue-950 border-b border-slate-300 hover:text-blue-400"
       >
         Learning about EU
       </button>
@@ -179,7 +179,7 @@
       </div>
       <button
         id="14"
-        class="w-full flex justify-between items-center py-6 text-slate-800 border-b border-slate-300 hover:text-blue-400"
+        class="w-full flex justify-between items-center py-6 text-blue-950 border-b border-slate-300 hover:text-blue-400"
       >
         Think Tanks
       </button>
@@ -216,7 +216,9 @@
         id="contentdiv-11"
         class="pt-6 contentdiv overflow-hidden transition-all duration-300 ease-in-out"
       >
-        <ul class="list-disc pl-4 text-slate-500">
+        <ul
+          class="ml-4 list-outside list-disc text-slate-500 border-l-4 border-blue-400 pl-6"
+        >
           <li class="hover:text-blue-400">
             <a
               href="https://ue.diplomatie.gouv.fr/representation-permanente-de-la-france-aupres-de-lunion-europeenne"
@@ -249,7 +251,9 @@
         id="contentdiv-12"
         class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
       >
-        <ul class="list-disc pl-4 text-slate-500">
+        <ul
+          class="ml-4 list-outside list-disc pl-6 border-blue-400 border-l-4 text-slate-500"
+        >
           <li class="hover:text-blue-400">
             <a
               href="https://www.sciencespo.fr/cevipof/fr/annuaire/costa-olivier/"
@@ -292,7 +296,9 @@
         id="contentdiv-13"
         class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
       >
-        <ul class="list-disc pl-4 text-slate-500">
+        <ul
+          class="ml-4 list-outside list-disc pl-6 border-blue-400 border-l-4 text-slate-500"
+        >
           <li class="hover:text-blue-400">
             <a
               href="https://france.representation.ec.europa.eu/points-de-contact-en-france_fr"
@@ -306,7 +312,9 @@
         id="contentdiv-14"
         class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
       >
-        <ul class="list-disc pl-4 text-slate-500">
+        <ul
+          class="ml-4 list-outside list-disc pl-6 border-blue-400 border-l-4 text-slate-500"
+        >
           <li class="hover:text-blue-400">
             <a href="https://www.ifri.org/fr" target="_blank">Think Tank</a>
           </li>
@@ -336,10 +344,10 @@
   class="mx-auto mt-12 max-w-5xl px-6 py-6 md:grid md:grid-cols-2 md:gap-6"
 >
   <div>
-    <div class="text-blue-950 text-xl font-medium">Readings</div>
+    <h1 class="text-blue-950 text-xl font-medium">Readings</h1>
     <button
       id="21"
-      class="w-full flex justify-between items-center border-b border-slate-300 hover:text-blue-400 text-blue-950"
+      class="w-full flex justify-between items-center border-b border-slate-300 text-blue-400"
     >
       <div class="flex items-center gap-4 mt-4 mb-4">
         <!-- {{ with resources.Get "images/core.png" }}
@@ -672,16 +680,16 @@
 
   <!-- Media -->
   <div>
-    <div class="text-blue-950 text-xl font-medium pb-4">Media</div>
+    <h1 class="text-blue-950 text-xl font-medium pb-4">Media</h1>
     <div id="content-11">
       <div class="pb-4 text-slate-500">
         <!--Merging rss feeds from two media sources-->
         {{ $rss1 := dict }} {{ $rss2 := dict }} {{ $url :=
-        "https://www.lefigaro.fr/rss/figaro_international.xml?v=2" }} {{ with
+        "https://www.lefigaro.fr/rss/figaro_international.xml?v=3" }} {{ with
         try (resources.GetRemote $url) }} {{ with .Err }} {{ errorf "%s" . }} {{
         else with .Value }} {{ $rss1 = .Content | transform.Unmarshal }} {{ else
         }} {{ errorf "Unable to get remote resource %q" $url }} {{ end }} {{ end
-        }} {{ $url := "https://www.lemonde.fr/europe/rss_full.xml?v=2" }} {{
+        }} {{ $url := "https://www.lemonde.fr/europe/rss_full.xml?v=3" }} {{
         with try (resources.GetRemote $url) }} {{ with .Err }} {{ errorf "%s" .
         }} {{ else with .Value }} {{ $rss2 = .Content | transform.Unmarshal }}
         {{ else }} {{ errorf "Unable to get remote resource %q" $url }} {{ end
@@ -693,7 +701,7 @@
           "europ")}} {{ $newsitem := . }}
           <li class="block">
             {{ $media_url := index $newsitem.content "-url" }}
-            <div>
+            <div class="hover:text-blue-400">
               <img
                 class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
                 src="{{ $media_url }}"
@@ -724,20 +732,21 @@
   const tabDivs = document.querySelectorAll(".tabdiv");
   const toggleButtons = document.querySelectorAll("button");
   const contentDivs = document.querySelectorAll(".contentdiv");
+  const elBlue950s = document.querySelectorAll("button.text-blue-950");
 
   // SVG for Down icon
   const downSVG = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-          <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-        </svg>
-      `;
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+          </svg>
+        `;
 
   // SVG for Up icon
   const upSVG = `
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
-          <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
-        </svg>
-      `;
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+            <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+          </svg>
+        `;
 
   // Add EventListener to tablabel
   tabLabels.forEach((tablabel) => {
@@ -750,8 +759,9 @@
         tablabel.classList.add("border-transparent");
       });
       // Add styling to clicked element
-      const targetElement = event.target;
+      const targetElement = event.currentTarget;
       targetElement.classList.remove("text-blue-950");
+      targetElement.classList.remove("border-transparent");
       targetElement.classList.add("text-blue-400");
       targetElement.classList.add("border-blue-400");
 
@@ -761,7 +771,7 @@
       });
 
       // Show related tabdiv
-      const tabId = event.target.id;
+      const tabId = event.currentTarget.id;
       const tabDiv = document.getElementById(`tabdiv-${tabId}`);
       tabDiv.classList.remove("hidden");
     });
@@ -777,11 +787,26 @@
     });
   });
 
+  elBlue950s.forEach((elBlue950) => {
+    elBlue950.addEventListener("click", function (event) {
+      // Remove text-blue-400
+      const elBlue400s = document.querySelectorAll("button.text-blue-400");
+      elBlue400s.forEach((elBlue400) => {
+        elBlue400.classList.remove("text-blue-400");
+        elBlue400.classList.add("text-blue-950");
+      });
+      // Add text-blue-400 to target element
+      const targetElement = event.currentTarget;
+      targetElement.classList.remove("text-blue-950");
+      targetElement.classList.add("text-blue-400");
+    });
+  });
+
   function removeClassStartingWith(el, prefix) {
     /*var classes = el.className.split(" ").filter(function (v) {
-      return v.lastIndexOf(prefix, 0) !== 0;
-    });
-    el.className = classes.join(" ").trim();*/
+        return v.lastIndexOf(prefix, 0) !== 0;
+      });
+      el.className = classes.join(" ").trim();*/
     for (let i = el.classList.length - 1; i >= 0; i--) {
       const className = el.classList[i];
       if (className.startsWith(prefix)) {
