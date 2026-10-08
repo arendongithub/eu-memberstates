@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width" />
 <title>
-  EU Memberstates
+  European Member {state} ship
 </title>
 
 <link rel="stylesheet" href="/css/style.css" />
@@ -22,7 +22,7 @@
 
 <div class="mx-auto flex max-w-5xl justify-between px-6 py-12">
   <div>
-    <p class="text-2xl font-bold text-blue-950">EU Memberstates</p>
+    <p class="text-3xl font-bold text-blue-950">European Member {state} ship</p>
   </div>
   <div>
     
@@ -104,12 +104,13 @@
 
 
 
-<div id="chartdiv" class="m-0 h-250 w-full mx-auto mt-6 max-w-5xl">
+
+<div class="w-full mx-auto mt-6 max-w-5xl px-4">
   <div class="sm:w-1/2">
-    <h1 class="px-2 text-2xl font-semibold text-blue-950">
-      Project description
+    <h1 class="px-2 text-3xl font-semibold text-blue-950">
+      Discover Europe&#39;s United Diversity
     </h1>
-    <div class="mt-2 p-2 text-gray-700"><p>EU Memberstates is a project &hellip;</p>
+    <div class="mt-2 p-2 text-gray-700"><p>Behind each Member State lies a world of resources carefully curated for your research.</p>
 </div>
     <a
       href="http://localhost:1313//about"
@@ -117,6 +118,7 @@
       >Read more</a
     >
   </div>
+  <div id="chartdiv" class="-mt-50 h-screen"></div>
 </div>
 <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
@@ -129,7 +131,7 @@
 
     const chart = root.container.children.push(
       am5map.MapChart.new(root, {
-        projection: am5map.geoMercator(),
+        projection: am5map.geoNaturalEarth1(),
         panX: "rotateX",
         wheelY: "zoom",
       }),

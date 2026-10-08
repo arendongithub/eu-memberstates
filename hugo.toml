@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'EU Memberstates'
+title = 'European Member {state} ship'
 theme = 'eums'
 
 [caches]

@@ -46,6 +46,8 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-medium: 500;
@@ -237,6 +239,12 @@
   .my-12 {
     margin-block: calc(var(--spacing) * 12);
   }
+  .-mt-50 {
+    margin-top: calc(var(--spacing) * -50);
+  }
+  .-mt-100 {
+    margin-top: calc(var(--spacing) * -100);
+  }
   .mt-1 {
     margin-top: var(--spacing);
   }
@@ -314,8 +322,14 @@
   .h-40 {
     height: calc(var(--spacing) * 40);
   }
+  .h-150 {
+    height: calc(var(--spacing) * 150);
+  }
   .h-250 {
     height: calc(var(--spacing) * 250);
+  }
+  .h-screen {
+    height: 100vh;
   }
   .max-h-0 {
     max-height: 0px;
@@ -513,6 +527,10 @@
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
   .text-4xl {
     font-size: var(--text-4xl);

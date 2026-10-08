@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on EU Memberstates</title>
+    <title>Home on European Member {state} ship</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Home on EU Memberstates</description>
+    <description>Recent content in Home on European Member {state} ship</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Sep 2026 09:00:00 -0700</lastBuildDate>
