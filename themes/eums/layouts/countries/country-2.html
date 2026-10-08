@@ -27,7 +27,7 @@
 <!--SECTION - TABS - Country description | Links to institutions-->
 <section class="mx-auto mt-12 max-w-5xl px-6 py-6">
   <!--Tabs-->
-  <div class="font-medium font-irvin">
+  <div class="font-medium text-xl font-irvin">
     <ul class="flex flex-wrap gap-4">
       <li>
         <!--button
@@ -344,7 +344,7 @@
   class="mx-auto mt-12 max-w-5xl px-6 py-6 md:grid md:grid-cols-2 md:gap-6"
 >
   <div>
-    <h1 class="text-blue-950 text-xl font-medium">Readings</h1>
+    <h1 class="text-blue-950 text-2xl font-medium font-irvin">Readings</h1>
     <button
       id="21"
       class="w-full flex justify-between items-center border-b border-slate-300 text-blue-400"
@@ -680,20 +680,20 @@
 
   <!-- Media -->
   <div>
-    <h1 class="text-blue-950 text-xl font-medium pb-4">Media</h1>
+    <h1 class="text-blue-950 text-2xl font-medium font-irvin pb-4">Media</h1>
     <div id="content-11">
       <div class="pb-4 text-slate-500">
         <!--Merging rss feeds from two media sources-->
         {{ $rss1 := dict }} {{ $rss2 := dict }} {{ $url :=
-        "https://www.lefigaro.fr/rss/figaro_international.xml?v=3" }} {{ with
+        "https://www.lefigaro.fr/rss/figaro_international.xml?v=4" }} {{ with
         try (resources.GetRemote $url) }} {{ with .Err }} {{ errorf "%s" . }} {{
         else with .Value }} {{ $rss1 = .Content | transform.Unmarshal }} {{ else
         }} {{ errorf "Unable to get remote resource %q" $url }} {{ end }} {{ end
-        }} {{ $url := "https://www.lemonde.fr/europe/rss_full.xml?v=3" }} {{
-        with try (resources.GetRemote $url) }} {{ with .Err }} {{ errorf "%s" .
-        }} {{ else with .Value }} {{ $rss2 = .Content | transform.Unmarshal }}
-        {{ else }} {{ errorf "Unable to get remote resource %q" $url }} {{ end
-        }} {{ end }} {{ $rss := merge $rss1 $rss2}}
+        }}{{ $url := "https://www.lemonde.fr/europe/rss_full.xml?v=4" }} {{ with
+        try (resources.GetRemote $url) }} {{ with .Err }} {{ errorf "%s" . }} {{
+        else with .Value }} {{ $rss2 = .Content | transform.Unmarshal }} {{ else
+        }} {{ errorf "Unable to get remote resource %q" $url }} {{ end }} {{ end
+        }} {{ $rss := merge $rss1 $rss2}}
         <ul class="space-y-4">
           {{ range sort $rss.channel.item "pubDate" "desc" }} {{ if or
           (strings.Contains .title "Europ") (strings.Contains .title "europ")

@@ -22,7 +22,7 @@
 
 <div class="mx-auto flex max-w-5xl justify-between px-6 py-12">
   <div>
-    <p class="text-3xl font-bold text-blue-950">European Member {state} ship</p>
+    <p class="text-4xl font-irvin font-bold text-blue-950">European Member {state} ship</p>
   </div>
   <div>
     
@@ -106,8 +106,8 @@
 
 
 <div class="w-full mx-auto mt-6 max-w-5xl px-4">
-  <div class="sm:w-1/2">
-    <h1 class="px-2 text-3xl font-semibold text-blue-950">
+  <div class="relative z-50 sm:w-1/2">
+    <h1 class="px-2 text-3xl font-semibold font-irvin text-blue-950">
       Discover Europe&#39;s United Diversity
     </h1>
     <div class="mt-2 p-2 text-gray-700"><p>Behind each Member State lies a world of resources carefully curated for your research.</p>
@@ -118,7 +118,7 @@
       >Read more</a
     >
   </div>
-  <div id="chartdiv" class="-mt-50 h-screen"></div>
+  <div id="chartdiv" class="-mt-50 h-screen relative z-0"></div>
 </div>
 <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
@@ -132,7 +132,8 @@
     const chart = root.container.children.push(
       am5map.MapChart.new(root, {
         projection: am5map.geoNaturalEarth1(),
-        panX: "rotateX",
+        panX: "none",
+        panY: "none",
         wheelY: "zoom",
       }),
     );

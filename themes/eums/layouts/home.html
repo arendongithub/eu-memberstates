@@ -38,8 +38,8 @@
 -->
 
 <div class="w-full mx-auto mt-6 max-w-5xl px-4">
-  <div class="sm:w-1/2">
-    <h1 class="px-2 text-3xl font-semibold text-blue-950">
+  <div class="relative z-50 sm:w-1/2">
+    <h1 class="px-2 text-3xl font-semibold font-irvin text-blue-950">
       {{ .Param "heading_project_description" }}
     </h1>
     <div class="mt-2 p-2 text-gray-700">{{ .Content }}</div>
@@ -49,7 +49,7 @@
       >{{ .Param "button_read_more" }}</a
     >
   </div>
-  <div id="chartdiv" class="-mt-50 h-screen"></div>
+  <div id="chartdiv" class="-mt-50 h-screen relative z-0"></div>
 </div>
 <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
 <script src="https://cdn.amcharts.com/lib/5/map.js"></script>
