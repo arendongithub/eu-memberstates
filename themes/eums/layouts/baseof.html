@@ -4,7 +4,15 @@
   dir="{{ or site.Language.LanguageDirection `ltr` }}"
 >
   <head>
-    {{ partial "head.html" . }}
+    {{ partial "head.html" . }} {{ range resources.ByType "font" }}
+    <link
+      rel="preload"
+      href="{{ .RelPermalink }}"
+      as="font"
+      type="{{ .MediaType.Type }}"
+      crossorigin
+    />
+    {{ end }}
   </head>
   <body class="font-display bg-gray-100">
     <header>{{ partial "header.html" . }}</header>

@@ -14,7 +14,23 @@
  
       <script src="/js/main.js"></script>
 
-
+ 
+    <link
+      rel="preload"
+      href="/fonts/Irvin-Heading.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    
+    <link
+      rel="preload"
+      href="/fonts/ACaslonPro-Regular.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    
   </head>
   <body class="font-display bg-gray-100">
     <header>
@@ -105,7 +121,7 @@
   </div>
 
   
-  <div class="text-2xl text-slate-500" id="curiosity"></div>
+  <div class="text-3xl font-caslon text-slate-500" id="curiosity"></div>
   <script>
     let curiosities = [
       "Fourteen African countries continue to use the CFA franc, a currency created during French colonial rule and still pegged to the euro with a guarantee from the French Treasury.",
@@ -141,7 +157,12 @@
           class="tablabel inline-block border-transparent py-4 border-b text-blue-950 hover:text-blue-400 hover:border-blue-400"
           id="2"
         >
-          Explore key actors
+          Explore key actors<span
+            class="ml-3 inline-block font-sans rounded border-1 border-green-700 text-green-700 px-1 text-xs hover:bg-green-700 hover:text-white"
+            ><a href="/methodology#key_actors" target="_blank"
+              >How did we select?</a
+            ></span
+          >
         </div>
       </li>
     </ul>
@@ -176,6 +197,24 @@
         class="w-full flex justify-between items-center py-6 border-b border-slate-300 text-blue-400"
       >
         Institutions
+        <span class="text-sm inline-block text-slate-500"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 inline"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+            />
+          </svg>
+          The official channels through which a member state’s interests are
+          represented in the EU</span
+        >
       </button>
       <div
         class="contentdiv max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
@@ -198,6 +237,9 @@
               href="https://www.assemblee-nationale.fr/dyn/europe-et-international"
               target="_blank"
               >National parliament – EU committee(s) </a
+            ><br />
+            <span class="text-sm"
+              >Committee responsible scrutinizing EU affairs</span
             >
           </li>
           <li class="hover:text-blue-400">
@@ -335,6 +377,23 @@
               href="https://www.assemblee-nationale.fr/dyn/europe-et-international"
               target="_blank"
               >National parliament – EU committee(s) </a
+            ><br />
+            <span class="text-sm"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 inline"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+                />
+              </svg>
+              Committee responsible scrutinizing EU affairs</span
             >
           </li>
           <li class="hover:text-blue-400">
@@ -443,7 +502,15 @@
   class="mx-auto mt-12 max-w-5xl px-6 py-6 md:grid md:grid-cols-2 md:gap-6"
 >
   <div>
-    <h1 class="text-blue-950 text-2xl font-medium font-irvin">Readings</h1>
+    <h1 class="text-blue-950 text-2xl font-medium font-irvin">
+      Readings
+      <span
+        class="ml-3 inline-block font-sans rounded border-1 border-green-700 text-green-700 px-1 text-xs hover:bg-green-700 hover:text-white"
+        ><a href="/methodology#library" target="_blank"
+          >How did we select?</a
+        ></span
+      >
+    </h1>
     <button
       id="21"
       class="w-full flex justify-between items-center border-b border-slate-300 text-blue-400"
@@ -807,121 +874,93 @@
 
   
   <div>
-    <h1 class="text-blue-950 text-2xl font-medium font-irvin pb-4">Media</h1>
+    <h1 class="text-blue-950 text-2xl font-medium font-irvin pb-4">
+      Media<span
+        class="ml-3 inline-block font-sans rounded border-1 border-green-700 text-green-700 px-1 text-xs hover:bg-green-700 hover:text-white"
+        ><a href="/methodology#media" target="_blank"
+          >How did we select?</a
+        ></span
+      >
+    </h1>
     <div id="content-11">
       <div class="pb-4 text-slate-500">
         
-                     
+        
+        
         <ul class="space-y-4">
-             
+                 
           <li class="block">
             
             <div class="hover:text-blue-400">
               <img
                 class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
-                src="https://img.lemde.fr/2026/10/07/507/0/7718/3859/644/322/60/0/aaa77de_ftp-1-efkunr56smmm-5287987-01-06.jpg"
+                src="https://img.lemde.fr/2026/09/13/500/0/3000/1500/644/322/60/0/22b8dd3_upload-1-xad81jmj11wa-rn-meetingrentre-e-asurp-208943.jpg"
               />
 
               <span
                 class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
                 >Le Monde</span
               >
-              <a href="https://www.lemonde.fr/international/article/2026/10/07/entre-les-etats-unis-et-la-grece-une-alliance-et-une-cooperation-energetique-sans-precedent_6789648_3210.html" target="_blank"
-                >Entre les Etats-Unis et la Grèce, une alliance et une coopération énergétique sans précédent (October 7, 2026)</a
-              >: <span class="text-sm">En visite à Athènes, le secrétaire d’Etat américain, Marco Rubio, a appelé l’Europe à sortir de « sa torpeur » et a au contraire salué le rôle de la Grèce, « l’alliée [de Washington] face à la question migratoire et aux menaces terroristes ».</span>
+              <a href="https://www.lemonde.fr/politique/article/2026/10/21/soupcon-d-infractions-financieres-le-secretaire-general-du-groupe-du-rn-au-parlement-europeen-perquisitionne_6798262_823448.html" target="_blank"
+                >Le secrétariat général du groupe du RN au Parlement européen perquisitionné dans le cadre d’une enquête sur des infractions financières (October 21, 2026)</a
+              >: <span class="text-sm">Les perquisitions sont menées dans les locaux de Philip Claeys à Strasbourg et à Bruxelles, dans le cadre d’une enquête ouverte en 2025. Des prestations commandées par le Rassemblement national à des sociétés de la « GUD Connection » sont dans le viseur de la justice européenne.</span>
             </div>
           </li>
-             
+               
           <li class="block">
             
             <div class="hover:text-blue-400">
               <img
                 class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
-                src="https://img.lemde.fr/2026/10/06/342/0/5568/2784/644/322/60/0/339a895_ftp-1-mjvg0mcbzbvv-2026-10-06t112117z-1178191297-rc2mxnakzvdy-rtrmadp-3-bulgaria-incident.JPG"
+                src="https://img.lemde.fr/2020/08/04/0/0/3500/1748/644/322/60/0/2f2b443_FW1_BOOKING-HLDG-JOBS-_0804_11.JPG"
               />
 
               <span
                 class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
                 >Le Monde</span
               >
-              <a href="https://www.lemonde.fr/international/article/2026/10/07/les-attaques-de-drones-s-intensifient-en-mer-noire-au-large-de-la-bulgarie-et-la-roumanie_6789632_3210.html" target="_blank"
-                >Les attaques de drones s’intensifient en mer Noire au large de la Bulgarie et de la Roumanie (October 7, 2026)</a
-              >: <span class="text-sm">Ces pays membres de l’Union européenne et de l’OTAN, victimes indirectes de la guerre en Ukraine, sont en partie démunis pour protéger leurs côtes et les navires commerciaux qui circulent dans leur zone économique exclusive.</span>
+              <a href="https://www.lemonde.fr/economie/article/2026/10/21/booking-visee-par-une-enquete-de-l-ue-les-europeens-doivent-pouvoir-reserver-leurs-vacances-sans-craindre-d-etre-arnaques_6798241_3234.html" target="_blank"
+                >Booking visé par une enquête de l’UE : « Les Européens doivent pouvoir réserver leurs vacances sans craindre d’être arnaqués » (October 21, 2026)</a
+              >: <span class="text-sm">La plateforme de réservation d’hôtels devra démontrer qu’elle a pris des mesures suffisantes afin de protéger ses clients contre les annonces trompeuses et les arnaques en ligne.</span>
             </div>
           </li>
-                    
+               
           <li class="block">
             
             <div class="hover:text-blue-400">
               <img
                 class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
-                src="https://img.lemde.fr/2026/10/07/351/0/6000/3000/644/322/60/0/da08782_upload-1-byxgzmfdujct-gettyimages-2292915889.jpg"
+                src="https://img.lemde.fr/2026/10/06/0/0/5000/2500/644/322/60/0/8f324b3_ftp-1-eh3may6i4gin-2026-10-06t133650z-1793183811-rc2pxnanp2p8-rtrmadp-3-germany-politics-afd.JPG"
               />
 
               <span
                 class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
                 >Le Monde</span
               >
-              <a href="https://www.lemonde.fr/economie/article/2026/10/08/l-europe-espere-faire-plier-la-chine-ce-geant-economique-devenu-imbattable_6790213_3234.html" target="_blank"
-                >L’Europe espère faire plier la Chine, ce géant économique devenu imbattable (October 8, 2026)</a
-              >: <span class="text-sm">Le commissaire européen au commerce, Maros Sefcovic, arrivé à Pékin jeudi 8 octobre, a pour mission de convaincre la Chine de limiter ses exportations massives à bas coût vers l’Europe. Mais le pays de Xi Jinping estime qu’il n’est pas responsable du déclin industriel du Vieux Continent.</span>
-            </div>
-          </li>
-            
-          <li class="block">
-            
-            <div class="hover:text-blue-400">
-              <img
-                class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
-                src="https://img.lemde.fr/2026/10/06/333/0/4000/2000/644/322/60/0/f788bb1_ftp-1-c99ik1w1fjt5-19b8c34d71ee41d89af29ef0a37fdaa9-2-036a26d0b48a4b48b91b747986a3ecce.jpg"
-              />
-
-              <span
-                class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
-                >Le Monde</span
-              >
-              <a href="https://www.lemonde.fr/international/article/2026/10/08/en-europe-le-rapport-a-israel-polarise-le-monde-politique_6790198_3210.html" target="_blank"
-                >En Europe, le rapport à Israël polarise le monde politique (October 8, 2026)</a
-              >: <span class="text-sm">Les gauches européennes durcissent leurs positions vis-à-vis de l’Etat hébreu alors que les opinions publiques sont révulsées par sa guerre d’anéantissement à Gaza. A l’inverse, les partis d’extrême droite soutiennent globalement le gouvernement de Benyamin Nétanyahou.</span>
-            </div>
-          </li>
-            
-          <li class="block">
-            
-            <div class="hover:text-blue-400">
-              <img
-                class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
-                src="https://img.lemde.fr/2026/10/08/651/0/5472/2736/644/322/60/0/a75bcd9_upload-1-xk6vqv60a7td-000-8qh4rr.jpg"
-              />
-
-              <span
-                class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
-                >Le Monde</span
-              >
-              <a href="https://www.lemonde.fr/economie/article/2026/10/08/les-patrons-de-michelin-et-de-bmw-missionnes-par-emmanuel-macron-pour-trouver-un-accord-sur-la-preference-europeenne-dans-l-automobile_6790195_3234.html" target="_blank"
-                >Les patrons de Michelin et de BMW missionnés par Emmanuel Macron pour trouver un accord sur la préférence européenne dans l’automobile (October 8, 2026)</a
-              >: <span class="text-sm">Le président de la République a demandé personnellement à Florent Menegaux et à Nicolas Peter, début septembre, de rapprocher les positions des constructeurs et des équipementiers pour tenter de préserver au mieux les emplois de la filière. Faute d’accord entre industriels, les Vingt-Sept peinent à s’accorder sur le texte de la Commission européenne.</span>
-            </div>
-          </li>
-            
-          <li class="block">
-            
-            <div class="hover:text-blue-400">
-              <img
-                class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
-                src="https://img.lemde.fr/2026/10/08/443/0/6849/3424/644/322/60/0/ded6a7a_upload-1-ibyq1q3rng3l-sipa-sipahub60081756-000003.jpg"
-              />
-
-              <span
-                class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
-                >Le Monde</span
-              >
-              <a href="https://www.lemonde.fr/international/article/2026/10/08/les-entraves-a-la-libre-circulation-au-sein-de-l-espace-schengen-se-multiplient_6790183_3210.html" target="_blank"
-                >Les entraves à la libre circulation au sein de l’espace Schengen se multiplient (October 8, 2026)</a
-              >: <span class="text-sm">Plusieurs Etats membres ont rétabli des contrôles aux frontières, à commencer par la France et, plus encore, l’Allemagne. Dans un contexte de poussée de l’extrême droite sur le Vieux Continent, la Commission européenne, pourtant « gardienne des traités », ne lutte que très modérément contre ces violations des règles.</span>
+              <a href="https://www.lemonde.fr/international/article/2026/10/22/au-parlement-europeen-l-operation-seduction-ratee-d-alice-weidel-la-cheffe-de-l-afd-allemande_6798589_3210.html" target="_blank"
+                >Au Parlement européen, l’opération séduction ratée d’Alice Weidel, la cheffe de l’AfD allemande (October 22, 2026)</a
+              >: <span class="text-sm">La coprésidente du parti d’extrême droite donnait une conférence à Strasbourg, mercredi, qui a attiré peu de monde au-delà de son groupe politique. Elle y a présenté son projet pour l’Europe, qui fait une large place à la démolition des institutions communautaires.</span>
             </div>
           </li>
               
+          <li class="block">
+            
+            <div class="hover:text-blue-400">
+              <img
+                class="float-left mr-4 h-20 w-20 shrink-0 rounded-sm object-cover"
+                src="https://img.lemde.fr/2026/10/20/1002/0/4000/2000/644/322/60/0/4f51e4b_upload-1-zb7grsafw7td-raf-bunker-044.JPG"
+              />
+
+              <span
+                class="inline-block rounded bg-gray-700 px-1 text-xs text-white uppercase"
+                >Le Monde</span
+              >
+              <a href="https://www.lemonde.fr/international/article/2026/10/22/face-a-la-russie-les-pays-du-nord-et-de-l-est-de-l-europe-preparent-leurs-societes-a-la-guerre_6798568_3210.html" target="_blank"
+                >Face à la Russie, les pays du nord et de l’est de l’Europe préparent leurs sociétés à la guerre (October 22, 2026)</a
+              >: <span class="text-sm">Abris antibombes, réserves stratégiques, plans d’évacuation… Depuis 2022, les pays européens frontaliers de la Russie investissent dans la défense civile, mobilisant tous les pans de leur société.</span>
+            </div>
+          </li>
+             
         </ul>
       </div>
     </div>

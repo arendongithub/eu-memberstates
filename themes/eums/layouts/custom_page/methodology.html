@@ -1,0 +1,44 @@
+{{ define "main" }}
+
+<!-- Methodology page -->
+<section class="py-6">
+  <div class="mx-auto max-w-5xl px-6">
+    <h1
+      class="font-irvin m-12 text-center text-4xl font-semibold text-blue-400"
+    >
+      {{ .Param "heading_methodology" }}
+    </h1>
+  </div>
+  <div class="mx-auto max-w-5xl px-6">
+    <h2
+      class="font-irvin py-3 text-2xl font-semibold text-gray-900"
+      id="library"
+    >
+      {{ .Param "heading_library" }}
+    </h2>
+    <div class="text-xl font-caslon text-gray-900">
+      {{ $html := .Param "content_library" }}{{ $html | safeHTML }}
+    </div>
+  </div>
+  <div class="mx-auto max-w-5xl px-6 mt-6">
+    <h2 class="font-irvin py-3 text-2xl font-semibold text-gray-900" id="media">
+      {{ .Param "heading_media" }}
+    </h2>
+    <div class="text-xl font-caslon text-gray-900">
+      {{ $html := .Param "content_media" }}{{ $html | safeHTML }}
+    </div>
+  </div>
+  <div class="mx-auto max-w-5xl px-6 mt-6">
+    <h2
+      class="font-irvin py-3 text-2xl font-semibold text-gray-900"
+      id="key_actors"
+    >
+      {{ .Param "heading_key_actors" }}
+    </h2>
+    <div class="text-xl font-caslon text-gray-900">
+      {{ $html := .Param "content_key_actors" }}{{ $html | safeHTML }}
+    </div>
+  </div>
+</section>
+
+{{ end }}
