@@ -1,1 +1,40 @@
+<!--
 <p>Copyright {{ now.Year }}. All rights reserved.</p>
+-->
+<div class="bg-blue-950">
+  <div id="footer" class="mx-auto max-w-5xl px-4 pt-6 pb-6">
+    {{ with resources.Get "images/EN_Co-fundedbytheEU_RGB_NEG.png" }}
+    <img
+      src="{{ .RelPermalink }}"
+      alt="Co-funded by the European Union logo"
+      class="h-15 mx-auto"
+    />
+    {{ end }}
+    <div class="text-sm text-white text-center">
+      Funded by the European Union. Views and opinions expressed are however
+      those of the author(s) only and do not necessarily reflect those of the
+      European Union or the European Education and Culture Executive Agency
+      (EACEA). Neither the European Union nor EACEA can be held responsible for
+      them.
+    </div>
+  </div>
+
+  <div id="footer" class="mx-auto max-w-5xl px-4 pt-6 pb-6">
+    {{ with resources.Get "images/theplant-logo.png" }}
+    <img
+      src="{{ .RelPermalink }}"
+      alt="The Plant logo"
+      class="h-10 mx-auto border border-white bg-white"
+    />
+    {{ end }}
+    <div class="text-sm text-white text-center">
+      This project has been generously funded by a grant from
+      <a
+        class="underline"
+        href="https://theplant.maastrichtuniversity.nl"
+        target="_blank"
+        >The Plant</a
+      >.
+    </div>
+  </div>
+</div>

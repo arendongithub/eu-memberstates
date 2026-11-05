@@ -65,7 +65,8 @@
         projection: am5map.geoNaturalEarth1(),
         panX: "none",
         panY: "none",
-        wheelY: "zoom",
+        //wheelY: "zoom",
+        wheelY: "none",
       }),
     );
 
@@ -109,13 +110,15 @@
     polygonSeries.mapPolygons.template.setAll({
       tooltipText: "{name}",
       interactive: true,
-      fill: am5.color(0x2f80ed),
+      //fill: am5.color(0x2f80ed),
+      fill: am5.color("#162456"),
       stroke: am5.color(0xffffff),
       strokeWidth: 1,
     });
 
     polygonSeries.mapPolygons.template.states.create("hover", {
-      fill: am5.color(0xf2994a),
+      //fill: am5.color(0xf2994a),
+      fill: am5.color("#CC7722"),
     });
 
     polygonSeries.mapPolygons.template.events.on("click", function (event) {
